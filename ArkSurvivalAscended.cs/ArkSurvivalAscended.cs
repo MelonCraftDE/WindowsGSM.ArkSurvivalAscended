@@ -155,7 +155,10 @@ namespace WindowsGSM.Plugins
                 else
                 {
                     Functions.ServerConsole.SetMainWindow(p.MainWindowHandle);
-                    Functions.ServerConsole.SendWaitToMainWindow("quit");
+                    Functions.ServerConsole.SendWaitToMainWindow("cheat saveworld");
+                    Functions.ServerConsole.SendWaitToMainWindow("{ENTER}");
+                    await Task.Delay(6000);
+                    Functions.ServerConsole.SendWaitToMainWindow("cheat doexit");
                     Functions.ServerConsole.SendWaitToMainWindow("{ENTER}");
                     await Task.Delay(6000);
                 }
